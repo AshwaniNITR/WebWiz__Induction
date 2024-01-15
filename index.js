@@ -184,19 +184,20 @@ function clock(){
     if(hours<10){
         $(".hour").text("0"+hours+":");
        }
-    else if(hours>=10 && hours<=12 ){
+    else if(hours>=10 || hours<=12 ){
         $(".hour").text(hours+":");
     }
     else if(hours>=12){
         $(".hour").text("0"+(hours-12)+":");
     }
-    else if(hours>=22 && hours<=24){
+    else if(hours>=22 || hours<=24){
         $(".hour").text((hours-12)+":");
     }
     var cdate=date.getDate();//cdate:-date to be used in clock
     var month=date.getMonth();
     var year=date.getFullYear();
     if(cdate<10 || month<9){
+        
     $(".date").text("0"+cdate+"- 0"+(month+1)+"-"+year)
     }
     else{
