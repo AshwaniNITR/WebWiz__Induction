@@ -184,10 +184,10 @@ function clock(){
     if(hours<10){
         $(".hour").text("0"+hours+":");
        }
-    else if(hours>=10 || hours<=12 ){
+    else if(hours>=10 && hours<=12 ){
         $(".hour").text(hours+":");
     }
-    else if(hours>=12){
+    else if(hours>=12 && hours<=21){
         $(".hour").text("0"+(hours-12)+":");
     }
     else if(hours>=22 || hours<=24){
