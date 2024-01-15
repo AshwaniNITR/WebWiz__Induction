@@ -196,13 +196,13 @@ function clock(){
     var cdate=date.getDate();//cdate:-date to be used in clock
     var month=date.getMonth();
     var year=date.getFullYear();
-    if(cdate<10 || month<9){
-        
-    $(".date").text("0"+cdate+"- 0"+(month+1)+"-"+year)
+    if(cdate<10 ){
+        var cdate="0"+cdate;
     }
-    else{
-        $(".date").text(cdate+"-"+(month+1)+"-"+year)
-    }
+   if(month<10){
+    var month="0"+(month+1);
+   }
+   $(".date").text(cdate+"-"+(month)+"-"+year)
     if(hours>=12){
         $(".ampm").text("PM");
     }
