@@ -200,7 +200,7 @@ function clock(){
     $(".date").text("0"+cdate+"- 0"+(month+1)+"-"+year)
     }
     else{
-        $(".date").text("0"+cdate+"-"+(month+1)+"-"+year)
+        $(".date").text(cdate+"-"+(month+1)+"-"+year)
     }
     if(hours>=12){
         $(".ampm").text("PM");
