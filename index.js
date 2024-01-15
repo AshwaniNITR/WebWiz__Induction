@@ -196,7 +196,7 @@ function clock(){
     var cdate=date.getDate();//cdate:-date to be used in clock
     var month=date.getMonth();
     var year=date.getFullYear();
-    if(cdate<10 && month<9){
+    if(cdate<10 || month<9){
     $(".date").text("0"+cdate+"- 0"+(month+1)+"-"+year)
     }
     else{
